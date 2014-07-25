@@ -37,169 +37,46 @@ type Region struct {
 	Route53Endpoint      string
 }
 
-var USGovWest = Region{
-	"us-gov-west-1",
-	"https://ec2.us-gov-west-1.amazonaws.com",
-	"https://s3-fips-us-gov-west-1.amazonaws.com",
+
+var OutscaleEU = Region{
+	"eu-west-1a",
+	"https://api.outscale.com",
+	"",
 	"",
 	true,
 	true,
 	"",
-	"https://sns.us-gov-west-1.amazonaws.com",
-	"https://sqs.us-gov-west-1.amazonaws.com",
-	"https://iam.us-gov.amazonaws.com",
-	"https://elasticloadbalancing.us-gov-west-1.amazonaws.com",
-	"https://autoscaling.us-gov-west-1.amazonaws.com",
-	"https://rds.us-gov-west-1.amazonaws.com",
-	"https://route53.amazonaws.com",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
 }
 
-var USEast = Region{
+var OutscaleUS = Region{
 	"us-east-1",
-	"https://ec2.us-east-1.amazonaws.com",
-	"https://s3.amazonaws.com",
+	"https://api.outscale.us",
 	"",
-	false,
-	false,
-	"https://sdb.amazonaws.com",
-	"https://sns.us-east-1.amazonaws.com",
-	"https://sqs.us-east-1.amazonaws.com",
-	"https://iam.amazonaws.com",
-	"https://elasticloadbalancing.us-east-1.amazonaws.com",
-	"https://autoscaling.us-east-1.amazonaws.com",
-	"https://rds.us-east-1.amazonaws.com",
-	"https://route53.amazonaws.com",
+	"",
+	true,
+	true,
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
 }
 
-var USWest = Region{
-	"us-west-1",
-	"https://ec2.us-west-1.amazonaws.com",
-	"https://s3-us-west-1.amazonaws.com",
-	"",
-	true,
-	true,
-	"https://sdb.us-west-1.amazonaws.com",
-	"https://sns.us-west-1.amazonaws.com",
-	"https://sqs.us-west-1.amazonaws.com",
-	"https://iam.amazonaws.com",
-	"https://elasticloadbalancing.us-west-1.amazonaws.com",
-	"https://autoscaling.us-west-1.amazonaws.com",
-	"https://rds.us-west-1.amazonaws.com",
-	"https://route53.amazonaws.com",
-}
-
-var USWest2 = Region{
-	"us-west-2",
-	"https://ec2.us-west-2.amazonaws.com",
-	"https://s3-us-west-2.amazonaws.com",
-	"",
-	true,
-	true,
-	"https://sdb.us-west-2.amazonaws.com",
-	"https://sns.us-west-2.amazonaws.com",
-	"https://sqs.us-west-2.amazonaws.com",
-	"https://iam.amazonaws.com",
-	"https://elasticloadbalancing.us-west-2.amazonaws.com",
-	"https://autoscaling.us-west-2.amazonaws.com",
-	"https://rds.us-west-2.amazonaws.com",
-	"https://route53.amazonaws.com",
-}
-
-var EUWest = Region{
-	"eu-west-1",
-	"https://ec2.eu-west-1.amazonaws.com",
-	"https://s3-eu-west-1.amazonaws.com",
-	"",
-	true,
-	true,
-	"https://sdb.eu-west-1.amazonaws.com",
-	"https://sns.eu-west-1.amazonaws.com",
-	"https://sqs.eu-west-1.amazonaws.com",
-	"https://iam.amazonaws.com",
-	"https://elasticloadbalancing.eu-west-1.amazonaws.com",
-	"https://autoscaling.eu-west-1.amazonaws.com",
-	"https://rds.eu-west-1.amazonaws.com",
-	"https://route53.amazonaws.com",
-}
-
-var APSoutheast = Region{
-	"ap-southeast-1",
-	"https://ec2.ap-southeast-1.amazonaws.com",
-	"https://s3-ap-southeast-1.amazonaws.com",
-	"",
-	true,
-	true,
-	"https://sdb.ap-southeast-1.amazonaws.com",
-	"https://sns.ap-southeast-1.amazonaws.com",
-	"https://sqs.ap-southeast-1.amazonaws.com",
-	"https://iam.amazonaws.com",
-	"https://elasticloadbalancing.ap-southeast-1.amazonaws.com",
-	"https://autoscaling.ap-southeast-1.amazonaws.com",
-	"https://rds.ap-southeast-1.amazonaws.com",
-	"https://route53.amazonaws.com",
-}
-
-var APSoutheast2 = Region{
-	"ap-southeast-2",
-	"https://ec2.ap-southeast-2.amazonaws.com",
-	"https://s3-ap-southeast-2.amazonaws.com",
-	"",
-	true,
-	true,
-	"https://sdb.ap-southeast-2.amazonaws.com",
-	"https://sns.ap-southeast-2.amazonaws.com",
-	"https://sqs.ap-southeast-2.amazonaws.com",
-	"https://iam.amazonaws.com",
-	"https://elasticloadbalancing.ap-southeast-2.amazonaws.com",
-	"https://autoscaling.ap-southeast-2.amazonaws.com",
-	"https://rds.ap-southeast-2.amazonaws.com",
-	"https://route53.amazonaws.com",
-}
-
-var APNortheast = Region{
-	"ap-northeast-1",
-	"https://ec2.ap-northeast-1.amazonaws.com",
-	"https://s3-ap-northeast-1.amazonaws.com",
-	"",
-	true,
-	true,
-	"https://sdb.ap-northeast-1.amazonaws.com",
-	"https://sns.ap-northeast-1.amazonaws.com",
-	"https://sqs.ap-northeast-1.amazonaws.com",
-	"https://iam.amazonaws.com",
-	"https://elasticloadbalancing.ap-northeast-1.amazonaws.com",
-	"https://autoscaling.ap-northeast-1.amazonaws.com",
-	"https://rds.ap-northeast-1.amazonaws.com",
-	"https://route53.amazonaws.com",
-}
-
-var SAEast = Region{
-	"sa-east-1",
-	"https://ec2.sa-east-1.amazonaws.com",
-	"https://s3-sa-east-1.amazonaws.com",
-	"",
-	true,
-	true,
-	"https://sdb.sa-east-1.amazonaws.com",
-	"https://sns.sa-east-1.amazonaws.com",
-	"https://sqs.sa-east-1.amazonaws.com",
-	"https://iam.amazonaws.com",
-	"https://elasticloadbalancing.sa-east-1.amazonaws.com",
-	"https://autoscaling.sa-east-1.amazonaws.com",
-	"https://rds.sa-east-1.amazonaws.com",
-	"https://route53.amazonaws.com",
-}
 
 var Regions = map[string]Region{
-	APNortheast.Name:  APNortheast,
-	APSoutheast.Name:  APSoutheast,
-	APSoutheast2.Name: APSoutheast2,
-	EUWest.Name:       EUWest,
-	USEast.Name:       USEast,
-	USWest.Name:       USWest,
-	USWest2.Name:      USWest2,
-	SAEast.Name:       SAEast,
-	USGovWest.Name:    USGovWest,
+
+	OutscaleEU.Name:  OutscaleEU,
+	OutscaleUS.Name:  OutscaleUS,
 }
 
 type Auth struct {
