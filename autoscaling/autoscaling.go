@@ -4,7 +4,7 @@ package autoscaling
 
 import (
 	"encoding/xml"
-	"github.com/mitchellh/goamz/aws"
+	"github.com/outscale/goamz/aws"
 	"net/http"
 	"net/url"
 	"strconv"

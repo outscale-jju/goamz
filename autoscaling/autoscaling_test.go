@@ -1,9 +1,9 @@
 package autoscaling_test
 
 import (
-	"github.com/mitchellh/goamz/autoscaling"
-	"github.com/mitchellh/goamz/aws"
-	"github.com/mitchellh/goamz/testutil"
+	"github.com/outscale/goamz/autoscaling"
+	"github.com/outscale/goamz/aws"
+	"github.com/outscale/goamz/testutil"
 	. "github.com/motain/gocheck"
 	"testing"
 )
